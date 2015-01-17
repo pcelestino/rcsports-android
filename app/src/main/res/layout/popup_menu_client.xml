@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/popup_client_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/popup_client_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_shape_material_white"
+            android:drawableLeft="@drawable/ic_edit"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="@string/popup_client_edit"
+            android:textColor="@color/gray" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/popup_client_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_shape_material_white"
+            android:drawableLeft="@drawable/ic_delete"
+            android:gravity="center|left"
+            android:padding="10dp"
+            android:text="@string/popup_client_delete"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+</ScrollView>

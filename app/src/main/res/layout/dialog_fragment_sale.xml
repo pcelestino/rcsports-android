@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/dialog_sale_clients"
+        style="?android:attr/spinnerItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nextFocusDown="@+id/dialog_sale_products"
+        android:prompt="@string/select_client"
+        android:textColor="@color/white">
+
+        <requestFocus />
+    </Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <EditText
+            android:id="@+id/sale_number_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:inputType="numberSigned"
+            android:nextFocusRight="@+id/dialog_sale_add_product_button"
+            android:text="@string/default_text_value" />
+
+        <Spinner
+            android:id="@+id/dialog_sale_products"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:nextFocusLeft="@+id/sale_number_picker"
+            android:prompt="@string/select_product" />
+
+        <ImageButton
+            android:id="@+id/dialog_sale_add_product_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape_material_blue"
+            android:padding="6dp"
+            android:src="@drawable/ic_add"
+            android:text="@string/add" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/dialog_sale_list_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/divider_background_shape"
+        android:fadeScrollbars="false"
+        android:focusable="false"
+        android:scrollbarThumbVertical="@drawable/scrollbar_shape_vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/dialog_sale_add_prepayment_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/prepayment"
+            android:inputType="numberDecimal"
+            android:nextFocusRight="@+id/dialog_sale_button_save" />
+
+        <ImageButton
+            android:id="@+id/dialog_sale_sub_prepayment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_shape_material_blue"
+            android:focusable="false"
+            android:padding="6dp"
+            android:src="@drawable/undo"
+            android:text="@string/add" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_background_shape"
+        android:gravity="center"
+        android:padding="10dp"
+        android:stretchColumns="3">
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/total_value"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialog_sale_total_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/paid"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialog_sale_paid_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/dialog_sale_debit_text_price"
+                android:text="@string/remaining_amount"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialog_sale_debit_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_sale_button_leave"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/button_shape_material_blue"
+            android:focusable="false"
+            android:text="@string/leave"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/dialog_sale_button_save"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/button_shape_material_blue"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

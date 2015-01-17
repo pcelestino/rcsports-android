@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/list_information_payments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollbar_shape_vertical" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_background_shape"
+        android:gravity="center"
+        android:padding="10dp"
+        android:stretchColumns="3">
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/total_value"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/payment_information_total_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="@string/paid"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/payment_information_paid_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/green"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/payment_information_debit_text_price"
+                android:text="@string/remaining_amount"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/payment_information_debit_price"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/currency"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/payment_information_button_ok"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape_material_blue"
+            android:text="@string/ok"
+            android:textColor="@color/white">
+
+            <requestFocus />
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>
